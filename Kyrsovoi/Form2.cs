@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using DGVPrinterHelper;
 
 
 namespace Kyrsovoi
@@ -191,10 +190,5 @@ private void RefreshDataGrid(DataGridView dgw)
             add.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            var dgvPrinter = new DGVPrinter();
-            dgvPrinter.CreateReport("Отчёт", dataGridView1);
-        }
     }
 }

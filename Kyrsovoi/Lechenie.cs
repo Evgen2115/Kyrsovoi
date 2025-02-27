@@ -42,14 +42,8 @@ namespace Kyrsovoi
         }
         private void ReadSingleRow(DataGridView dgw, IDataRecord record)
         {
-            dgw.Rows.Add(
-                record.GetInt32(0), // ID_Lechenie
-                record.GetString(1), // Imya_posetitelya
-                record.GetString(2), // Diagnoz
-                record.GetString(3), // Kyrs_ozdorovleniya
-                record.GetInt32(4), // ID_Vrach
-                record.GetInt32(5)  // ID_Laborant
-            );
+            dgw.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), record.GetInt32(4), record.GetInt32(5), RowState.ModifiedNew);
+
         }
 
         private void RefreshDataGrid(DataGridView dgw)
